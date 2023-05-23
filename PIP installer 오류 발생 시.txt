@@ -1,0 +1,26 @@
+pip 명령어 에러 해결 : Faltal error in launcher: Unable to create process using '"'
+찾아보니 경로 때문에 발생하는 오류라는데 간단하게 해결 가능하다.
+
+pip 명령어 앞에 python -m 을 붙여준다.
+
+ex) python -m pip install XXX
+
+
+
+[파이썬] pip 설치 SSLError 오류 해결 방법: SSLCertVerificationError [SSL: CERTIFICATE_VERIFY_FAILED]
+
+출처: https://curryyou.tistory.com/179 [카레유]
+
+
+<해결 방법 #1>
+--tursted-host 옵션으로 파이썬 라이브러리 서버 주소(pypi.org와 files.pythonhosted.org)를 넣어주면 된다.
+pip --trusted-host pypi.org --trusted-host files.pythonhosted.org install <라이브러리>
+▶ 위 코드에 <라이브러리> 명만 바꾸어 실행하면 해결.
+▶ 예를 들어, request 패키지를 설치하려면? 
+    pip --trusted-host pypi.org --trusted-host files.pythonhosted.org install request
+ 
+
+출처: https://curryyou.tistory.com/179 [카레유]
+
+
+python -m pip --trusted-host pypi.org --trusted-host files.pythonhosted.org install pyqt5

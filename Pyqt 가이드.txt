@@ -1,0 +1,11 @@
+QTDesigner 설치 방법
+
+pip install pyqt5-tools 로 추가 설치하시면 됩니다.
+
+실행은 pyqt5-tools designer 로 하시거나, Python\PythonXX\Lib\site-packages\qt5_applications\Qt\bin 폴더에 있는 designer.exe를 실행하시면 되구요.
+
+
+
+PYUIC5 사용방법
+cd C:\PythonProjects\zendesk_macro_downloader\UI
+pyuic5 -x macro_downloader.ui -o macro_downloader.py

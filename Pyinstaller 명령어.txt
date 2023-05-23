@@ -1,0 +1,24 @@
+UI 파일을 PY 파일로 변환 
+cd C:\PythonProjects\zendesk_macro_downloader\UI
+pyuic5 -x macro_downloader.ui -o macro_downloader.py
+
+파이썬 라이브러리 설치
+python -m pip --trusted-host pypi.org --trusted-host files.pythonhosted.org install pyqt5
+
+UI파일을 PY 파일로 변환 설치
+cd C:\PythonProjects\zendesk_macro_downloader\UI
+pyuic5 -x macro_downloader.ui -o macro_downloader.py
+
+cd C:\PythonProjects\ppt_word_checker\UI
+pyuic5 -x ppt_word_checker.ui -o ppt_word_checker.py
+
+Pyinstall로 EXE 파일 생성
+cd C:\PythonProjects\zendesk_macro_downloader
+pyinstaller -F -w main.py
+pyinstaller --icon= icons.ico -F -w main.py
+
+cd C:\PythonProjects\ppt_word_checker
+pyinstaller -F -w main.py
+
+exe 파일 실행시모듈 없음 에러가 발생할때
+pyinstaller -F --hidden-import=openpyxl 파일명.py
